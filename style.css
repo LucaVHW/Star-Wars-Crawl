@@ -1,0 +1,51 @@
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-image: url("https://ak1.picdn.net/shutterstock/videos/17029351/thumb/1.jpg");
+}
+.star-wars {
+  display: flex;
+  justify-content: center;
+  height: 800px;
+  perspective: 400px;
+  color: orange;
+  font-family: monospace;
+  font-size: 500%;
+  font-weight: 600;
+  letter-spacing: 6px;
+  line-height: 150%;
+  text-align: center;
+  text-shadow: 1px 1px black;
+}
+.crawl {
+  position: relative;
+  top: -100px;
+  transform-origin: 50% 10%;
+}
+/* Animation name*/
+@keyframes crawl {
+  0% {
+    /* Element start vanonder */
+    top: 0;
+    /* Draai de text 20 graden maar hou het dichtbij de kijker */
+    transform: rotateX(20deg) translateZ(0);
+  }
+  100% {
+    top: -6000px;
+    transform: rotateX(25deg) translateZ(-2500px);
+  }
+}
+.crawl {
+  position: relative;
+  transform-origin: 50% 100%;
+  animation: crawl 60s linear;
+}
+.fade {
+  position: relative;
+  width: 100%;
+  min-height: 60vh;
+  top: -25px;
+  background-image: linear-gradient(0deg, transparent, black 75%);
+  z-index: 1;
+}
